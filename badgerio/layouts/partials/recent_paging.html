@@ -1,0 +1,22 @@
+{{ if (or .Paginator.HasNext .Paginator.HasPrev)}}
+<!-- /Navigation -->
+<div class="pagination">
+    <hr>
+    <div class="column-left">
+        {{ if .Paginator.HasNext }}
+    	    <a href="{{ .Paginator.Next.URL }}">&laquo; Older</a>
+        {{ else }}
+            &nbsp;
+        {{ end }}
+    </div>
+    <div class="column-centre text-centre">&nbsp;</div>
+    <div class="column-right text-right">
+        {{ if .Paginator.HasPrev }}
+    	    <a href="{{ .Paginator.Prev.URL }}">Newer &raquo;</a>
+        {{ else }}
+            &nbsp;
+        {{ end }}
+    </div>
+    <hr>
+</div>
+{{ end }}

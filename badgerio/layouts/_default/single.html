@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL }}
+<article>
+    {{ print "<!--" .Params.secret "-->" | safeHTML }}
+    <div class="readtime">Estimated read time: {{ .ReadingTime }} mins</div>
+    {{ .Content }}
+    <dive class="article_meta">
+        Published {{ .Date.Format "Jan 2, 2006" }}<br>
+        {{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}<a href="{{ $baseurl }}/tags/{{ $e | urlize }}">{{ $e }}</a>{{ end }}
+    </dive>
+</article>
+{{ partial "single_paging.html" . }}
+{{ partial "footer.html" . }}

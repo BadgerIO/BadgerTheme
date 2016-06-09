@@ -1,0 +1,10 @@
+    <footer class="sitefooter">
+        <div class="left">
+            <a href="/">Home</a>{{ range $i, $e := .Site.Sections }}{{ if $i }} &#124; {{ end }}<a href="/{{ $i | urlize }}">{{ title $i }}</a>{{ end }}
+        </div>
+        <div class="right">
+            <small>{{ .Site.Copyright | safeHTML }}</small>
+        </div>
+    </footer>
+</body>
+</html>

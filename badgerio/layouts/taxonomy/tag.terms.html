@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+<div class="article_list">
+    <h2>Tags</h2>
+    {{ $data := .Data }}
+    <ul class="no-bullet">
+    {{ range $key, $value := .Data.Terms }}
+      <li><a href="/{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> {{ len $value }}</li>
+    {{ end }}
+    </ul>
+</div>
+{{ partial "footer.html" . }}
+

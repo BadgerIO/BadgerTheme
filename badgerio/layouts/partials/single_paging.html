@@ -1,0 +1,20 @@
+<!-- /Navigation -->
+<div class="pagination">
+    <hr>
+    <div class="column-left">
+        {{ if .PrevInSection }}
+    	    <a href="{{ .PrevInSection.Permalink }}">&laquo; Older</a>
+        {{ else }}
+            &nbsp;
+        {{ end }}
+    </div>
+    <div class="column-centre text-centre"><span class="browsing">Currently browsing {{ .Section }}</span></div>
+    <div class="column-right text-right">
+        {{ if .NextInSection }}
+    	    <a href="{{ .NextInSection.Permalink }}">Newer &raquo;</a>
+        {{ else }}
+            &nbsp;
+        {{ end }}
+    </div>
+    <hr>
+</div>

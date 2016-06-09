@@ -1,0 +1,6 @@
+<article>
+    <h2 class="post-title"><a href="{{ .Permalink }}" rel="bookmark" title="Link to {{ .Title }}">{{ .Title }}</a></h2>
+    <p>{{ .Params.intro }}</p>
+    <small>Estimated read time: {{ .ReadingTime }} mins</small><br>
+    <small>Published {{ .Date.Format "Jan 2, 2006" }}</small>
+</article>

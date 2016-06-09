@@ -1,0 +1,10 @@
+{{ partial "header.html" . }}
+<div class="article_list">
+    <h2>Recent Musings</h2>
+    {{ range .Paginator.Pages }}
+    {{ .Render "li" }}
+    {{ end }}
+    {{ partial "recent_paging.html" . }}
+</div>
+{{ partial "footer.html" . }}
+

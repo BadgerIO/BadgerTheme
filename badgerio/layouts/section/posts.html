@@ -1,0 +1,9 @@
+{{ partial "header.html" . }}
+<div class="article_list">
+    <h2>Recent Posts</h2>
+  {{ range where .Data.Pages "Section" "posts" }}
+  {{ .Render "li" }}
+  {{ end }}
+</div>
+{{ partial "footer.html" . }}
+
